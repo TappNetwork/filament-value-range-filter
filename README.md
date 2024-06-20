@@ -1,6 +1,7 @@
 # Filament Value Range Filter
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tapp/filament-value-range-filter.svg?style=flat-square)](https://packagist.org/packages/tapp/filament-value-range-filter)
+![GitHub Tests Action Status](https://github.com/TappNetwork/filament-value-range-filter/actions/workflows/run-tests.yml/badge.svg)
 ![Code Style Action Status](https://github.com/TappNetwork/filament-value-range-filter/actions/workflows/pint.yml/badge.svg)
 [![Total Downloads](https://img.shields.io/packagist/dt/tapp/filament-value-range-filter.svg?style=flat-square)](https://packagist.org/packages/tapp/filament-value-range-filter)
 
@@ -22,9 +23,18 @@ php artisan vendor:publish --tag="filament-value-range-filter-translations"
 
 ![Filament Value Range Filters](https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/filters.png)
 
-![Filament Value Range Filter Between Indicator](https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/filter_indicator.png)
+<img align="left" alt="Filament Value Range Filter Options" title="Filament Value Range Filter Options" src="https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/filter_range_options.png" width="40%" />
 
-![Filament Value Range Filter Options](https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/filter_range_options.png)
+<img alt="Filament Value Range Filter Between Indicator" title="Filament Value Range Filter Between Indicator" src="https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/filter_indicator.png" width="45%" />
+
+<br clear="left"/>
+
+
+<img align="left" alt="Filament Value Range Filter Greater Than Option" title="Filament Value Range Filter Greater Than Option" src="https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/filter_greater_than.png" width="40%" />
+
+<img alt="Filament Value Range Filter Greater Than Indicator" title="Filament Value Range Filter Greater Than Indicator" src="https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/greater_than_indicator.png" width="45%" />
+
+<br clear="left"/>
 
 ## Usage
 
@@ -71,9 +81,11 @@ ValueRangeFilter::make('project_value')
     ->locale('fr'),
 ```
 
-![Filament Value Range Filter Between currency in EUR](https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/between_eur.png)
+<img align="left" alt="Filament Value Range Filter Between currency in EUR Indicator" title="Filament Value Range Filter Between currency in EUR Indicator" src="https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/between_eur.png" width="40%" />
 
-![Filament Value Range Filter Between currency in EUR Indicator](https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/filter_indicator_eur.png)
+<img alt="Filament Value Range Filter Between currency in EUR" title="Filament Value Range Filter Between currency in EUR" src="https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/filter_indicator_eur.png" width="45%" />
+
+<br clear="left" />
 
 **Currency value**
 
@@ -86,3 +98,30 @@ ValueRangeFilter::make('project_value')
     ->currency()
     ->currencyInSmallestUnit(false),
 ```
+
+## Testing
+
+```bash
+composer test
+```
+
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## Security Vulnerabilities
+
+If you discover any security-related issues, please email `security@tappnetwork.com`.
+
+## Credits
+
+-  [Tapp Network](https://github.com/TappNetwork)
+-  [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
