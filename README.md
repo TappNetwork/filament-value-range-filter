@@ -5,7 +5,7 @@
 ![Code Style Action Status](https://github.com/TappNetwork/filament-value-range-filter/actions/workflows/pint.yml/badge.svg)
 [![Total Downloads](https://img.shields.io/packagist/dt/tapp/filament-value-range-filter.svg?style=flat-square)](https://packagist.org/packages/tapp/filament-value-range-filter)
 
-A value range filter for Laravel Filament.
+A value range filter for Filament table builder.
 
 ## Installation
 
