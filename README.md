@@ -23,18 +23,20 @@ php artisan vendor:publish --tag="filament-value-range-filter-translations"
 
 ![Filament Value Range Filters](https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/filters.png)
 
-<img align="left" alt="Filament Value Range Filter Options" title="Filament Value Range Filter Options" src="https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/filter_range_options.png" width="40%" />
+<img align="left" alt="Filament Value Range Filter Options" title="Filament Value Range Filter Options" src="https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/filter_range_options.png" width="45%" />
+
+<img alt="Filament Value Range Filter Greater Than Option" title="Filament Value Range Filter Greater Than Option" src="https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/filter_greater_than.png" width="45%" />
+
+<br clear="left"/>
+
+<br />
+
+**Filter Indicators**
 
 <img alt="Filament Value Range Filter Between Indicator" title="Filament Value Range Filter Between Indicator" src="https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/filter_indicator.png" width="45%" />
 
-<br clear="left"/>
+<img alt="Filament Value Range Filter Greater Than Indicator" title="Filament Value Range Filter Greater Than Indicator" src="https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/greater_than_indicator.png" width="100%" />
 
-
-<img align="left" alt="Filament Value Range Filter Greater Than Option" title="Filament Value Range Filter Greater Than Option" src="https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/filter_greater_than.png" width="40%" />
-
-<img alt="Filament Value Range Filter Greater Than Indicator" title="Filament Value Range Filter Greater Than Indicator" src="https://raw.githubusercontent.com/TappNetwork/filament-value-range-filter/main/docs/greater_than_indicator.png" width="45%" />
-
-<br clear="left"/>
 
 ## Usage
 
