@@ -36,7 +36,7 @@ class ValueRangeFilter extends Filter
                     ->schema([
                         Forms\Components\Select::make('range_condition')
                             ->hiddenLabel()
-                            ->placeholder('Select condition')
+                            ->placeholder(__('filament-value-range-filter::filament-value-range-filter.range.placeholder'))
                             ->live()
                             ->options([
                                 'equal' => __('filament-value-range-filter::filament-value-range-filter.range.options.equal'),
