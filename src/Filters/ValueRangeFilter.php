@@ -20,9 +20,15 @@ class ValueRangeFilter extends Filter
 
     protected ?string $indicatorEqualLabel = null;
 
+    protected ?string $indicatorNotEqualLabel = null;
+
     protected ?string $indicatorGreaterThanLabel = null;
 
+    protected ?string $indicatorGreaterThanEqualLabel = null;
+
     protected ?string $indicatorLessThanLabel = null;
+
+    protected ?string $indicatorLessThanEqualLabel = null;
 
     protected string|Closure $locale = 'en';
 
@@ -40,22 +46,33 @@ class ValueRangeFilter extends Filter
                             ->live()
                             ->options([
                                 'equal' => __('filament-value-range-filter::filament-value-range-filter.range.options.equal'),
+                                'not_equal' => __('filament-value-range-filter::filament-value-range-filter.range.options.not_equal'),
                                 'between' => __('filament-value-range-filter::filament-value-range-filter.range.options.between'),
                                 'greater_than' => __('filament-value-range-filter::filament-value-range-filter.range.options.greater_than'),
+                                'greater_than_equal' => __('filament-value-range-filter::filament-value-range-filter.range.options.greater_than_equal'),
                                 'less_than' => __('filament-value-range-filter::filament-value-range-filter.range.options.less_than'),
+                                'less_than_equal' => __('filament-value-range-filter::filament-value-range-filter.range.options.less_than_equal'),
                             ])
                             ->afterStateUpdated(function (Set $set) {
                                 $set('range_equal', null);
+                                $set('range_not_equal', null);
                                 $set('range_between_from', null);
                                 $set('range_between_to', null);
                                 $set('range_greater_than', null);
+                                $set('range_greater_than_equal', null);
                                 $set('range_less_than', null);
+                                $set('range_less_than_equal', null);
                             }),
                         Forms\Components\TextInput::make('range_equal')
                             ->hiddenLabel()
                             ->numeric()
                             ->placeholder(fn (): string => $this->getFormattedValue(0))
                             ->visible(fn (Get $get): bool => $get('range_condition') === 'equal' || empty($get('range_condition'))),
+                        Forms\Components\TextInput::make('range_not_equal')
+                            ->hiddenLabel()
+                            ->numeric()
+                            ->placeholder(fn (): string => $this->getFormattedValue(0))
+                            ->visible(fn (Get $get): bool => $get('range_condition') === 'not_equal'),
                         Forms\Components\Grid::make([
                             'default' => 1,
                             'sm' => 2,
@@ -76,11 +93,21 @@ class ValueRangeFilter extends Filter
                             ->numeric()
                             ->placeholder(fn (): string => $this->getFormattedValue(0))
                             ->visible(fn (Get $get): bool => $get('range_condition') === 'greater_than'),
+                        Forms\Components\TextInput::make('range_greater_than_equal')
+                            ->hiddenLabel()
+                            ->numeric()
+                            ->placeholder(fn (): string => $this->getFormattedValue(0))
+                            ->visible(fn (Get $get): bool => $get('range_condition') === 'greater_than_equal'),
                         Forms\Components\TextInput::make('range_less_than')
                             ->hiddenLabel()
                             ->numeric()
                             ->placeholder(fn (): string => $this->getFormattedValue(0))
                             ->visible(fn (Get $get): bool => $get('range_condition') === 'less_than'),
+                        Forms\Components\TextInput::make('range_less_than_equal')
+                            ->hiddenLabel()
+                            ->numeric()
+                            ->placeholder(fn (): string => $this->getFormattedValue(0))
+                            ->visible(fn (Get $get): bool => $get('range_condition') === 'less_than_equal'),
                     ])
                     ->columns(1),
             ])
@@ -89,6 +116,10 @@ class ValueRangeFilter extends Filter
                     ->when(
                         $data['range_equal'],
                         fn (Builder $query, $value): Builder => $query->where($this->getName(), '=', $this->getValue($value)),
+                    )
+                    ->when(
+                        $data['range_not_equal'],
+                        fn (Builder $query, $value): Builder => $query->where($this->getName(), '!=', $this->getValue($value)),
                     )
                     ->when(
                         $data['range_between_from'] && $data['range_between_to'],
@@ -101,8 +132,16 @@ class ValueRangeFilter extends Filter
                         fn (Builder $query, $value): Builder => $query->where($this->getName(), '>', $this->getValue($value)),
                     )
                     ->when(
+                        $data['range_greater_than_equal'],
+                        fn (Builder $query, $value): Builder => $query->where($this->getName(), '>=', $this->getValue($value)),
+                    )
+                    ->when(
                         $data['range_less_than'],
                         fn (Builder $query, $value): Builder => $query->where($this->getName(), '<', $this->getValue($value)),
+                    )
+                    ->when(
+                        $data['range_less_than_equal'],
+                        fn (Builder $query, $value): Builder => $query->where($this->getName(), '<=', $this->getValue($value)),
                     );
             })
             ->indicateUsing(function (array $data): array {
@@ -119,14 +158,38 @@ class ValueRangeFilter extends Filter
                         ->removeField('range_equal');
                 }
 
+                if ($data['range_not_equal']) {
+                    $indicators[] = Indicator::make(__('filament-value-range-filter::filament-value-range-filter.range.indicator.not_equal', [
+                        'label' => $this->getIndicatorEqualLabel() ?? $this->getLabel(),
+                        'value' => $this->getFormattedValue($data['range_not_equal'])
+                    ]))
+                        ->removeField('range_not_equal');
+                }
+
                 if ($data['range_greater_than']) {
                     $indicators[] = Indicator::make($this->getIndicatorGreaterThanLabel() ?? $this->getLabel().' is greater than '.$this->getFormattedValue($data['range_greater_than']))
                         ->removeField('range_greater_than');
                 }
 
+                if ($data['range_greater_than_equal']) {
+                    $indicators[] = Indicator::make(__('filament-value-range-filter::filament-value-range-filter.range.indicator.greater_than_equal', [
+                        'label' => $this->getIndicatorGreaterThanEqualLabel() ?? $this->getLabel(),
+                        'value' => $this->getFormattedValue($data['range_greater_than_equal'])
+                    ]))
+                        ->removeField('range_greater_than_equal');
+                }
+
                 if ($data['range_less_than']) {
                     $indicators[] = Indicator::make($this->getIndicatorLessThanLabel() ?? $this->getLabel().' is less than '.$this->getFormattedValue($data['range_less_than']))
                         ->removeField('range_less_than');
+                }
+
+                if ($data['range_less_than_equal']) {
+                    $indicators[] = Indicator::make(__('filament-value-range-filter::filament-value-range-filter.range.indicator.less_than_equal', [
+                        'label' => $this->getIndicatorLessThanEqualLabel() ?? $this->getLabel(),
+                        'value' => $this->getFormattedValue($data['range_less_than_equal'])
+                    ]))
+                        ->removeField('range_less_than_equal');
                 }
 
                 return $indicators;
@@ -175,6 +238,18 @@ class ValueRangeFilter extends Filter
         return $this->evaluate($this->indicatorEqualLabel);
     }
 
+    public function indicatorNotEqualLabel(?string $label): static
+    {
+        $this->indicatorNotEqualLabel = $label;
+
+        return $this;
+    }
+
+    public function getIndicatorNotEqualLabel(): ?string
+    {
+        return $this->evaluate($this->indicatorNotEqualLabel);
+    }
+
     public function indicatorGreaterThanLabel(?string $label): static
     {
         $this->indicatorGreaterThanLabel = $label;
@@ -187,6 +262,18 @@ class ValueRangeFilter extends Filter
         return $this->evaluate($this->indicatorGreaterThanLabel);
     }
 
+    public function indicatorGreaterThanEqualLabel(?string $label): static
+    {
+        $this->indicatorGreaterThanEqualLabel = $label;
+
+        return $this;
+    }
+
+    public function getIndicatorGreaterThanEqualLabel(): ?string
+    {
+        return $this->evaluate($this->indicatorGreaterThanEqualLabel);
+    }
+
     public function indicatorLessThanLabel(?string $label): static
     {
         $this->indicatorLessThanLabel = $label;
@@ -197,6 +284,18 @@ class ValueRangeFilter extends Filter
     public function getIndicatorLessThanLabel(): ?string
     {
         return $this->evaluate($this->indicatorLessThanLabel);
+    }
+
+    public function indicatorLessThanEqualLabel(?string $label): static
+    {
+        $this->indicatorLessThanEqualLabel = $label;
+
+        return $this;
+    }
+
+    public function getIndicatorLessThanEqualLabel(): ?string
+    {
+        return $this->evaluate($this->indicatorLessThanEqualLabel);
     }
 
     public function locale(string|Closure $locale = 'en'): static
