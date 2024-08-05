@@ -2,6 +2,16 @@
 
 All notable changes to the "Filament Value Range Filter" will be documented in this file.
 
+## v1.0.2 - 2024-08-05
+
+### What's Changed
+
+* translate indicators by @buddhaCode in https://github.com/TappNetwork/filament-value-range-filter/pull/6
+* add not equal, greater than equal and less than equal conditions by @buddhaCode in https://github.com/TappNetwork/filament-value-range-filter/pull/7
+* add german translations by @buddhaCode in https://github.com/TappNetwork/filament-value-range-filter/pull/8
+
+**Full Changelog**: https://github.com/TappNetwork/filament-value-range-filter/compare/v1.0.1...v1.0.2
+
 ## v1.0.1 - 2024-07-31
 
 ### What's Changed
