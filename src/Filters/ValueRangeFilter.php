@@ -168,7 +168,7 @@ class ValueRangeFilter extends Filter
                 if ($data['range_not_equal']) {
                     $indicators[] = Indicator::make(__('filament-value-range-filter::filament-value-range-filter.range.indicator.not_equal', [
                         'label' => $this->getIndicatorEqualLabel() ?? $this->getLabel(),
-                        'value' => $this->getFormattedValue($data['range_not_equal'])
+                        'value' => $this->getFormattedValue($data['range_not_equal']),
                     ]))
                         ->removeField('range_not_equal');
                 }
@@ -184,7 +184,7 @@ class ValueRangeFilter extends Filter
                 if ($data['range_greater_than_equal']) {
                     $indicators[] = Indicator::make(__('filament-value-range-filter::filament-value-range-filter.range.indicator.greater_than_equal', [
                         'label' => $this->getIndicatorGreaterThanEqualLabel() ?? $this->getLabel(),
-                        'value' => $this->getFormattedValue($data['range_greater_than_equal'])
+                        'value' => $this->getFormattedValue($data['range_greater_than_equal']),
                     ]))
                         ->removeField('range_greater_than_equal');
                 }
@@ -200,7 +200,7 @@ class ValueRangeFilter extends Filter
                 if ($data['range_less_than_equal']) {
                     $indicators[] = Indicator::make(__('filament-value-range-filter::filament-value-range-filter.range.indicator.less_than_equal', [
                         'label' => $this->getIndicatorLessThanEqualLabel() ?? $this->getLabel(),
-                        'value' => $this->getFormattedValue($data['range_less_than_equal'])
+                        'value' => $this->getFormattedValue($data['range_less_than_equal']),
                     ]))
                         ->removeField('range_less_than_equal');
                 }
