@@ -2,6 +2,18 @@
 
 All notable changes to the "Filament Value Range Filter" will be documented in this file.
 
+## v1.0.3 - 2024-09-06
+
+### What's Changed
+
+* feat: add support for pt_BR language by @rafaelvizu in https://github.com/TappNetwork/filament-value-range-filter/pull/9
+
+### New Contributors
+
+* @rafaelvizu made their first contribution in https://github.com/TappNetwork/filament-value-range-filter/pull/9
+
+**Full Changelog**: https://github.com/TappNetwork/filament-value-range-filter/compare/v1.0.2...v1.0.3
+
 ## v1.0.2 - 2024-08-05
 
 ### What's Changed
