@@ -220,7 +220,7 @@ class ValueRangeFilter extends Filter
 
     protected function getFormattedValue($value)
     {
-        if ($this->isCurrency() && $value !== null && !empty($value)) {
+        if ($this->isCurrency() && $value !== null && ! empty($value)) {
             return $this->isCurrency ? Number::currency($value, in: $this->currencyCode, locale: $this->locale) : $value;
         }
 
