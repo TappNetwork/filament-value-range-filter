@@ -2,6 +2,21 @@
 
 All notable changes to the "Filament Value Range Filter" will be documented in this file.
 
+## v1.0.5 - 2025-06-13
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 by @dependabot in https://github.com/TappNetwork/filament-value-range-filter/pull/11
+* Bump aglipanci/laravel-pint-action from 2.4 to 2.5 by @dependabot in https://github.com/TappNetwork/filament-value-range-filter/pull/12
+* Bump dependabot/fetch-metadata from 2.3.0 to 2.4.0 by @dependabot in https://github.com/TappNetwork/filament-value-range-filter/pull/13
+* fix:  prevent currency formatting error when "between" range input is cleared by user by @vierilusen in https://github.com/TappNetwork/filament-value-range-filter/pull/14
+
+### New Contributors
+
+* @vierilusen made their first contribution in https://github.com/TappNetwork/filament-value-range-filter/pull/14
+
+**Full Changelog**: https://github.com/TappNetwork/filament-value-range-filter/compare/v1.0.4...v1.0.5
+
 ## v1.0.4 - 2024-12-02
 
 ### What's Changed
