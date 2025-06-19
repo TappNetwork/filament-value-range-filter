@@ -9,7 +9,7 @@ A value range filter for Filament table builder.
 
 ## Version Compatibility
 
- Filament | Filament MailLog
+ Filament | Filament Value Range Filter
 :---------|:---------------------------
  3.x      | 1.x
  4.x      | 2.x
