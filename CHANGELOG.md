@@ -2,6 +2,14 @@
 
 All notable changes to the "Filament Value Range Filter" will be documented in this file.
 
+## v1.0.6 - 2025-06-19
+
+### What's Changed
+
+* Update README Filament 4 by @andreia in https://github.com/TappNetwork/filament-value-range-filter/pull/17
+
+**Full Changelog**: https://github.com/TappNetwork/filament-value-range-filter/compare/v1.0.5...v1.0.6
+
 ## v1.0.5 - 2025-06-13
 
 ### What's Changed
