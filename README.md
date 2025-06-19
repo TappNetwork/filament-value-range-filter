@@ -7,10 +7,27 @@
 
 A value range filter for Filament table builder.
 
+## Version Compatibility
+
+ Filament | Filament MailLog
+:---------|:---------------------------
+ 3.x      | 1.x
+ 4.x      | 2.x
+
 ## Installation
 
+You can install the package via composer:
+
+### For Filament 3
+
 ```bash
-composer require tapp/filament-value-range-filter
+composer require tapp/filament-value-range-filter:"^1.0"
+```
+
+### For Filament 4
+
+```bash
+composer require tapp/filament-value-range-filter:"^2.0"
 ```
 
 Optionally, you can publish the translations files with:
