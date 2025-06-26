@@ -2,6 +2,19 @@
 
 All notable changes to the "Filament Value Range Filter" will be documented in this file.
 
+## v2.0.1 - 2025-06-26
+
+### What's Changed
+
+* Add Dutch translations for value range filter options by @CodeWithDennis in https://github.com/TappNetwork/filament-value-range-filter/pull/18
+* Bump stefanzweifel/git-auto-commit-action from 5 to 6 by @dependabot in https://github.com/TappNetwork/filament-value-range-filter/pull/15
+
+### New Contributors
+
+* @CodeWithDennis made their first contribution in https://github.com/TappNetwork/filament-value-range-filter/pull/18
+
+**Full Changelog**: https://github.com/TappNetwork/filament-value-range-filter/compare/v1.0.6...v2.0.1
+
 ## v1.0.6 - 2025-06-19
 
 ### What's Changed
