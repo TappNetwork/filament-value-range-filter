@@ -2,6 +2,14 @@
 
 All notable changes to the "Filament Value Range Filter" will be documented in this file.
 
+## v2.0.2 - 2025-07-06
+
+### What's Changed
+
+* Add Indonesia translations for value range filter options by @vierilusen in https://github.com/TappNetwork/filament-value-range-filter/pull/19
+
+**Full Changelog**: https://github.com/TappNetwork/filament-value-range-filter/compare/v2.0.1...v2.0.2
+
 ## v2.0.1 - 2025-06-26
 
 ### What's Changed
