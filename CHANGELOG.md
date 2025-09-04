@@ -2,6 +2,14 @@
 
 All notable changes to the "Filament Value Range Filter" will be documented in this file.
 
+## v2.0.3 - 2025-09-04
+
+### What's Changed
+
+* [Filament 4.x] Add Dutch translations for value range filter options by @CodeWithDennis in https://github.com/TappNetwork/filament-value-range-filter/pull/22
+
+**Full Changelog**: https://github.com/TappNetwork/filament-value-range-filter/compare/v2.0.0...v2.0.3
+
 ## v2.0.0 - 2025-06-19
 
 ### What's Changed
