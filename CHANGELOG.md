@@ -2,6 +2,19 @@
 
 All notable changes to the "Filament Value Range Filter" will be documented in this file.
 
+## v1.0.7 - 2025-09-30
+
+### What's Changed
+
+* Bump aglipanci/laravel-pint-action from 2.5 to 2.6 by @dependabot[bot] in https://github.com/TappNetwork/filament-value-range-filter/pull/20
+* Add SK/CZ/HU/PL translations by @hamrak in https://github.com/TappNetwork/filament-value-range-filter/pull/23
+
+### New Contributors
+
+* @hamrak made their first contribution in https://github.com/TappNetwork/filament-value-range-filter/pull/23
+
+**Full Changelog**: https://github.com/TappNetwork/filament-value-range-filter/compare/v2.0.2...v1.0.7
+
 ## v2.0.2 - 2025-07-06
 
 ### What's Changed
