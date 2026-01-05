@@ -9,7 +9,7 @@ A value range filter for Filament table builder.
 
 ## Version Compatibility
 
- Filament | Filament Nord Theme | Documentation
+ Filament | Filament Value Range Filter | Documentation
 :--------|:-------------------|:--------------
 4.x      | 2.x                | [Check the docs](https://github.com/TappNetwork/filament-value-range-filter/tree/2.x)
 3.x      | 1.x                | Current
