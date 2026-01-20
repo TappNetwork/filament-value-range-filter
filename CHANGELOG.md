@@ -2,6 +2,18 @@
 
 All notable changes to the "Filament Value Range Filter" will be documented in this file.
 
+## v2.0.4 - 2026-01-20
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.4.0 to 2.5.0 by @dependabot[bot] in https://github.com/TappNetwork/filament-value-range-filter/pull/29
+* Bump actions/checkout from 4 to 6 by @dependabot[bot] in https://github.com/TappNetwork/filament-value-range-filter/pull/27
+* Bump stefanzweifel/git-auto-commit-action from 5 to 7 by @dependabot[bot] in https://github.com/TappNetwork/filament-value-range-filter/pull/28
+* Bump aglipanci/laravel-pint-action from 2.5 to 2.6 by @dependabot[bot] in https://github.com/TappNetwork/filament-value-range-filter/pull/30
+* Add Filament 5 support by @andreia in https://github.com/TappNetwork/filament-value-range-filter/pull/32
+
+**Full Changelog**: https://github.com/TappNetwork/filament-value-range-filter/compare/v2.0.3...v2.0.4
+
 ## v2.0.3 - 2025-09-04
 
 ### What's Changed
