@@ -11,7 +11,7 @@ A value range filter for Filament table builder.
 
  Filament | Filament Value Range Filter | Documentation
 :--------|:-------------------|:--------------
-4.x      | 2.x                | Current
+4.x/5.x  | 2.x                | Current
 3.x      | 1.x                | [Check the docs](https://github.com/TappNetwork/filament-value-range-filter/tree/1.x)
 
 ## Installation
