@@ -2,6 +2,19 @@
 
 All notable changes to the "Filament Value Range Filter" will be documented in this file.
 
+## v2.1.0 - 2026-04-24
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.5.0 to 3.1.0 by @dependabot[bot] in https://github.com/TappNetwork/filament-value-range-filter/pull/34
+* Update PHP test matrix to 8.4/8.5, drop 8.2 by @swilla in https://github.com/TappNetwork/filament-value-range-filter/pull/35
+
+### New Contributors
+
+* @swilla made their first contribution in https://github.com/TappNetwork/filament-value-range-filter/pull/35
+
+**Full Changelog**: https://github.com/TappNetwork/filament-value-range-filter/compare/v2.0.4...v2.1.0
+
 ## v2.0.4 - 2026-01-20
 
 ### What's Changed
